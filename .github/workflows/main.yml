@@ -18,12 +18,9 @@ jobs:
       - name: download
         run: |
           sudo apt-get update
-          sudo apt-get install ffmpeg curl rar python3 atomicparsley aria2 -y
-          curl -LJO https://github.com/ytdl-org/youtube-dl/releases/latest/download/youtube-dl
-          chmod +x ./youtube-dl
-          ./youtube-dl --config-location dl.conf
-          python3 ./deal_download_files.py
-
+          sudo apt-get install ffmpeg curl rar python3 aria2 -y
+          pip3 install you-get
+          you-get -i 'https://www.youtube.com/watch?v=jNQXAC9IVRw'
 
       - name: Release
         uses: marvinpinto/action-automatic-releases@latest
