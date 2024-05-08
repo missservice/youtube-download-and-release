@@ -20,7 +20,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install ffmpeg curl rar python3 aria2 -y
           pip3 install you-get
-          you-get -i 'https://www.youtube.com/watch?v=jNQXAC9IVRw'
+          you-get --itag=18 -O ./result/test 'https://www.youtube.com/watch?v=jNQXAC9IVRw'
 
       - name: Release
         uses: marvinpinto/action-automatic-releases@latest
